@@ -9,7 +9,7 @@ spec:
       chart: testkube
       sourceRef:
         kind: HelmRepository
-        name: ${releaseName}-kubeshop
+        name: kubeshop
         namespace: ${releaseNamespace}
       version: 1.12.16
   interval: 15s
@@ -22,7 +22,7 @@ spec:
     remediation:
       retries: 30
   timeout: 5m0s
-  releaseName: ${releaseName}
+  releaseName: testkube
   valuesFrom:
     - kind: ConfigMap
       name: testkube-1.12.16-defaults

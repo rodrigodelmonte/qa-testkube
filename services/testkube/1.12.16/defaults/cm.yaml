@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  namespace: testkube
+  namespace: ${releaseNamespace}
   name: testkube-1.12.16-defaults
 data:
   values.yaml: |
