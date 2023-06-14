@@ -1,7 +1,7 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: HelmRepository
 metadata:
-  name: kubeshop
+  name: ${releaseName}-kubeshop
   namespace: ${workspaceNamespace}
 spec:
   interval: 10m

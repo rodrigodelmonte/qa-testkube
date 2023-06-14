@@ -1,9 +1,9 @@
 displayName: Testkube
-description: Testkube is a Kubernetes-native testing framework for Testers, Developers, and DevOps practitioners that allows you to automate the executions of your existing testing tools inside your Kubernetes cluster.
+description: Kubernetes-native testing framework for test execution and orchestration
 category:
   - Tools
 overview: >
-  Kubernetes-native testing framework for test execution and orchestration
+  Testkube is a Kubernetes-native testing framework for Testers, Developers, and DevOps practitioners that allows you to automate the executions of your existing testing tools inside your Kubernetes cluster.
 scope:
   - workspace
   - project

@@ -1,7 +1,7 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: testkube
+  name: ${releaseName}-testkube
   namespace: ${releaseNamespace}
 spec:
   chart:
@@ -9,7 +9,7 @@ spec:
       chart: testkube
       sourceRef:
         kind: HelmRepository
-        name: kubeshop
+        name: ${releaseName}-kubeshop
         namespace: ${releaseNamespace}
       version: 1.12.16
   interval: 15s
@@ -22,7 +22,7 @@ spec:
     remediation:
       retries: 30
   timeout: 5m0s
-  releaseName: testkube
+  releaseName: ${releaseName}
   valuesFrom:
     - kind: ConfigMap
       name: testkube-1.12.16-defaults
