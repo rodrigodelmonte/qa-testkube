@@ -38,5 +38,11 @@ spec:
   appRef:
     name: testkube-1.12.16
     kind: App
+  clusterSelector:
+    matchExpressions:
+    - key: kommander.d2iq.io/cluster-name
+      operator: In
+      values:
+      - host-cluster
 EOF
 ```
