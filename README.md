@@ -27,7 +27,7 @@ EOF
 ## Enable Testkube Application using the CLI
 
 ```sh
-export WORKSPACE_NAMESPACE=kommander-default
+export WORKSPACE_NAMESPACE=kommander
 kubectl apply -f - <<EOF
 apiVersion: apps.kommander.d2iq.io/v1alpha3
 kind: AppDeployment
@@ -38,11 +38,5 @@ spec:
   appRef:
     name: testkube-1.12.16
     kind: App
-  clusterSelector:
-    matchExpressions:
-    - key: kommander.d2iq.io/cluster-name
-      operator: In
-      values:
-      - host-cluster
 EOF
 ```
