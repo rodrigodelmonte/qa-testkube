@@ -5,7 +5,7 @@ Teskube deployment scripts
 ## Create Git Repository
 
 ```sh
-export WORKSPACE_NAMESPACE=kommander-default-workspace
+export WORKSPACE_NAMESPACE=kommander
 kubectl apply -f - <<EOF
 apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: GitRepository
@@ -27,7 +27,7 @@ EOF
 ## Enable Testkube Application using the CLI
 
 ```sh
-export WORKSPACE_NAMESPACE=kommander-default-workspace
+export WORKSPACE_NAMESPACE=kommander-default
 kubectl apply -f - <<EOF
 apiVersion: apps.kommander.d2iq.io/v1alpha3
 kind: AppDeployment
